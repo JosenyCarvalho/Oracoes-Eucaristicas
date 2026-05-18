@@ -1,0 +1,16 @@
+{
+  "name": "Orações Eucarísticas",
+  "short_name": "Orações",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#f8f9fa",
+  "theme-color": "#8B0000",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://images.uncyc.org/pt/b/b3/Cruz_catolica.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
