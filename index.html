@@ -16,6 +16,10 @@
             --card-bg: #ffffff;
             --text: #2b2b2b;
             --text-secondary: #6c757d;
+            
+            /* Novas Cores Litúrgicas Solicitadas */
+            --color-pr: #fef9db; /* Amarelo Claro para o Presidente */
+            --color-as: #ffe3cc; /* Cor de Abóbora Suave para a Assembleia */
         }
 
         * {
@@ -170,23 +174,62 @@
             cursor: pointer;
         }
 
+        /* Estilo do Card da Oração com blocos coloridos */
         .oracao-card {
             background: var(--card-bg);
             border-radius: 16px;
-            padding: 24px;
+            padding: 16px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            line-height: 1.8;
-            white-space: pre-wrap;
             border: 1px solid #edeef0;
-            font-size: 17px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
         }
 
+        /* Linhas estilizadas por papel litúrgico */
+        .linha-liturgica {
+            padding: 8px 12px;
+            border-radius: 8px;
+            line-height: 1.8;
+            margin: 2px 0;
+            white-space: pre-wrap;
+        }
+
+        .linha-pr {
+            background-color: var(--color-pr);
+            border-left: 4px solid #f1c40f;
+        }
+
+        .linha-as {
+            background-color: var(--color-as);
+            border-left: 4px solid #e67e22;
+        }
+
+        .linha-neutra {
+            background-color: transparent;
+            color: var(--text-secondary);
+            font-style: italic;
+            padding-left: 12px;
+        }
+
+        .titulo-oracao {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 12px;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 6px;
+        }
+
+        /* Destaque do termo buscado */
         .highlight {
-            background-color: #ffde59;
+            background-color: #ffeb3b;
             font-weight: bold;
             padding: 2px 4px;
-            border-radius: 6px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+            color: #000000;
         }
 
         .placeholder-text {
@@ -238,7 +281,7 @@
         {
             id: 6,
             titulo: "ORAÇÃO EUCARÍSTICA VI",
-            texto: `ORAÇÃO EUCARÍSTICA VI\nPR: Na verdade, ó Pai, é nosso dever dar-vos graças, é nossa salvação dar-vos glória. Só vós sois o Deus vivo e verdadeiro que existis antes de todo o tempo e permaneceis para sempre, habitando em luz inacessível. Mas, porque sois o Deus de bondade e a fonte da vida, fizestes todas as coisas para cobrir de bênçãos as vossas criaturas e a muitos alegrar com a vossa luz.\nPR: Eis, pois, diante de vós os inumeráveis coros dos Anjos que dia e noite vos servem e, contemplando a glória de vossa face, vos louvam sem cessar. Com eles também nós e, por nossa voz, tudo o que criastes celebramos o vosso Nome, e exultantes de alegria, cantamos (dizemos) a uma só voz:\nAS: Santo, Santo, Santo, Senhor Deus do universo! O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!\nPR: Nós proclamamos vossa grandeza, Pai santo, a sabedoria e o amor com que fizestes todas as coisas. Criastes o ser humano à vossa imagem e lhe confiastes todo o universo para que, servindo somente a vós, seu Criador, cuidasse de toda criatura. E quando pela desobediência perdeu a vossa amizade, não o abandonastes ao poder da morte. A todos, porém, socorrestes com misericórdia, para que, ao procurar-vos, vos encontrassem. Muitas vezes oferecestes aliança à família humana e a instruístes pelos profetas na esperança da salvação.\nAS: A todos socorrestes com bondade!\nPR: E de tal modo, Pai santo, amastes o mundo que, chegada a plenitude dos tempos, nos enviastes vosso próprio Filho para ser o nosso Salvador. Encarnado pelo poder do Espírito Santo e nascido da Virgem Maria, Jesus viveu em tudo a condição humana, menos o pecado; anunciou aos pobres a salvação, aos oprimidos, a liberdade, aos tristes, a alegria. Para cumprir o vosso plano de amor, entregou-se à morte e, ressuscitando, destruiu a morte e renovou a vida.\nAS: Por amor nos enviastes vosso Filho!\nPR: E, a fim de não mais vivermos para nós, mas para ele, que por nós morreu e ressuscitou, enviou de vós, ó Pai, como primeiro dom aos vossos fiéis, o Espírito Santo, que continua sua obra no mundo para levar à plenitude toda a santificação.\nPR: Por isso, nós vos pedimos, ó Pai, que o mesmo Espírito Santo santifique estas oferendas, a fim de que se tornem o Corpo † e o Sangue de Jesus Cristo, vosso Filho e Senhor nosso, para celebrarmos este grande misterio que ele nos deixou em sinal da eterna aliança.\nAS: Enviai o vosso Espírito Santo!\nPR: Quando, pois, chegou a hora em que por vós, ó Pai, ia ser glorificado, tendo amado os seus que estavam no mundo, amou-os até o fim. Enquanto ceavam, Jesus tomou o pão, pronunciou a bênção de ação de graças, partiu e o deu a seus discípulos, dizendo:\nTOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS.\nDo mesmo modo, ele tomou em suas mãos o cálice com o vinho , deu-vos graças novamente e o deu a seus discípulos, dizendo:\nTOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS, PRA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM.\nMistério da fé!\nAS: Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!\nOu:\nMistério da fé e do amor!\nAS: Todas as vezes que comemos deste pão e bebemos deste cálice, anunciamos, Senhor, a vossa morte, enquanto esperamos a vossa vinda!\nOu:\nMistério da fé para a salvação do mundo!\nAS: Salvador do mundo, salvai-nos, vós que nos libertastes pela cruz e ressurreição.\nPR: Celebrando, agora, ó Pai, o memorial da nossa redenção, anunciamos a morte de Cristo e sua descida entre os mortos, proclamamos a sua ressurreição e ascensão à vossa direita e, esperando a sua vinda gloriosa, nós vos oferecemos o seu Corpo e Sangue, sacrifício do vosso agrado e salvação do mundo inteiro.\nAS: Aceitai, ó Senhor, a nossa oferta!\nPR: Olhai, com bondade, a oblação que destes à vossa Igreja e concedei aos que vamos participar do mesmo pão e do mesmo cálice que, reunidos pelo Espírito Santo num só corpo, nos tornemos em Cristo uma oferenda viva para o louvor da vossa glória.\nAS: O Espírito nos una num só corpo!\nPR: E agora, ó Pai, lembrai-vos de todos pelos quais vos oferecemos este sacrifício: o vosso servo o Papa N., o nosso Bispo N., os bispos do mundo inteiro, os presbíteros, os diáconos, e todos os ministros da vossa Igreja, os fiéis que, ao redor deste altar, se unem à nossa oferta, o povo que vos pertence e todos aqueles que vos procuram de coração sincero.\nAS: Lembrai-vos, ó Pai, da vossa Igreja!\nPR: Lembrai-vos também dos que morreram na paz do vosso Cristo e de todos os defuntos dos quais só vós conhecestes a fé.\nAS: Concedei-lhes, ó Senhor, a luz eterna!\nPR: E a todos nós, vossos Filhos e Filhas, concedei, ó Pai de bondade, alcançar a herança eterna, com a Virgem Maria, Mãe de Deus, São José, seu esposo, os Apóstolos e todos os Santos, no vosso reino, onde, com todas as criaturas, libertas da corrupção do pecado e da morte, vos glorificaremos por Cristo, Senhor nosso, por quem dais ao mundo todo bem e toda graça.\nPR: Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda a honra e toda a glória, por todos os séculos dos séculos.\nAS: Amém!`
+            texto: `ORAÇÃO EUCARÍSTICA VI\nPR: Na verdade, ó Pai, é nosso dever dar-vos graças, é nossa salvação dar-vos glória. Só vós sois o Deus vivo e verdadeiro que existis antes de todo o tempo e permaneceis para sempre, habitando em luz inacessível. Mas, porque sois o Deus de bondade e a fonte da vida, fizestes todas as coisas para cobrir de bênçãos as vossas criaturas e a muitos alegrar com a vossa luz.\nPR: Eis, pois, diante de vós os inumeráveis coros dos Anjos que dia e noite vos servem e, contemplando a glória de vossa face, vos louvam sem cessar. Com eles também nós e, por nossa voz, tudo o que criastes celebramos o vosso Nome, e exultantes de alegria, cantamos (dizemos) a uma só voz:\nAS: Santo, Santo, Santo, Senhor Deus do universo! O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!\nPR: Nós proclamamos vossa grandeza, Pai santo, a sabedoria e o amor com que fizestes todas as coisas. Criastes o ser humano à vossa imagem e lhe confiastes todo o universo para que, servindo somente a vós, seu Criador, cuidasse de toda criatura. E quando pela desobediência perdeu a vossa amizade, não o abandonastes ao poder da morte. A todos, porém, socorrestes com misericórdia, para que, ao procurar-vos, vos encontrassem. Muitas vezes oferecestes aliança à família humana e a instruístes pelos profetas na esperança da salvação.\nAS: A todos socorrestes com bondade!\nPR: E de tal modo, Pai santo, amastes o mundo que, chegada a plenitude dos tempos, nos enviastes vosso próprio Filho para ser o nosso Salvador. Encarnado pelo poder do Espírito Santo e nascido da Virgem Maria, Jesus viveu em tudo a condition humana, menos o pecado; anunciou aos pobres a salvação, aos oprimidos, a liberdade, aos tristes, a alegria. Para cumprir o vosso plano de amor, entregou-se à morte e, ressuscitando, destruiu a morte e renovou a vida.\nAS: Por amor nos enviastes vosso Filho!\nPR: E, a fim de não mais vivermos para nós, mas para ele, que por nós morreu e ressuscitou, enviou de vós, ó Pai, como primeiro dom aos vossos fiéis, o Espírito Santo, que continua sua obra no mundo para levar à plenitude toda a santificação.\nPR: Por isso, nós vos pedimos, ó Pai, que o mesmo Espírito Santo santifique estas oferendas, a fim de que se tornem o Corpo † e o Sangue de Jesus Cristo, vosso Filho e Senhor nosso, para celebrarmos este grande mistério que ele nos deixou em sinal da eterna aliança.\nAS: Enviai o vosso Espírito Santo!\nPR: Quando, pois, chegou a hora em que por vós, ó Pai, ia ser glorificado, tendo amado os seus que estavam no mundo, amou-os até o fim. Enquanto ceavam, Jesus tomou o pão, pronunciou a bênção de ação de graças, partiu e o deu a seus discípulos, dizendo:\nTOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS.\nDo mesmo modo, ele tomou em suas mãos o cálice com o vinho , deu-vos graças novamente e o deu a seus discípulos, dizendo:\nTOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS, PRA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM.\nMistério da fé!\nAS: Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!\nOu:\nMistério da fé e do amor!\nAS: Todas as vezes que comemos deste pão e bebemos deste cálice, anunciamos, Senhor, a vossa morte, enquanto esperamos a vossa vinda!\nOu:\nMistério da fé para a salvação do mundo!\nAS: Salvador do mundo, salvai-nos, vós que nos libertastes pela cruz e ressurreição.\nPR: Celebrando, agora, ó Pai, o memorial da nossa redenção, anunciamos a morte de Cristo e sua descida entre os mortos, proclamamos a sua ressurreição e ascensão à vossa direita e, esperando a sua vinda gloriosa, nós vos oferecemos o seu Corpo e Sangue, sacrifício do vosso agrado e salvação do mundo inteiro.\nAS: Aceitai, ó Senhor, a nossa oferta!\nPR: Olhai, com bondade, a oblação que destes à vossa Igreja e concedei aos que vamos participar do mesmo pão e do mesmo cálice que, reunidos pelo Espírito Santo num só corpo, nos tornemos em Cristo uma oferenda viva para o louvor da vossa glória.\nAS: O Espírito nos una num só corpo!\nPR: E agora, ó Pai, lembrai-vos de todos pelos quais vos oferecemos este sacrifício: o vosso servo o Papa N., o nosso Bispo N., os bispos do mundo inteiro, os presbíteros, os diáconos, e todos os ministros da vossa Igreja, os fiéis que, ao redor deste altar, se unem à nossa oferta, o povo que vos pertence e todos aqueles que vos procuram de coração sincero.\nAS: Lembrai-vos, ó Pai, da vossa Igreja!\nPR: Lembrai-vos também dos que morreram na paz do vosso Cristo e de todos os defuntos dos quais só vós conhecestes a fé.\nAS: Concedei-lhes, ó Senhor, a luz eterna!\nPR: E a todos nós, vossos Filhos e Filhas, concedei, ó Pai de bondade, alcançar a herança eterna, com a Virgem Maria, Mãe de Deus, São José, seu esposo, os Apóstolos e todos os Santos, no vosso reino, onde, com todas as criaturas, libertas da corrupção do pecado e da morte, vos glorificaremos por Cristo, Senhor nosso, por quem dais ao mundo todo bem e toda graça.\nPR: Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda a honra e toda a glória, por todos os séculos dos séculos.\nAS: Amém!`
         },
         {
             id: 5,
@@ -254,15 +297,15 @@
     const btnAumentar = document.getElementById('btnAumentar');
     const btnDiminuir = document.getElementById('btnDiminuir');
 
-    // SISTEMA DE ZOOM (FONTE)
+    // CONFIGURAÇÃO DO ZOOM (FONTE)
     let tamanhoFonteAtual = parseInt(localStorage.getItem('fontSizeApp')) || 17;
     
     function aplicarTamanhoFonte() {
         localStorage.setItem('fontSizeApp', tamanhoFonteAtual);
-        const cardOracao = document.querySelector('.oracao-card');
-        if (cardOracao) {
-            cardOracao.style.fontSize = tamanhoFonteAtual + 'px';
-        }
+        const linhas = document.querySelectorAll('.linha-liturgica');
+        linhas.forEach(linha => {
+            linha.style.fontSize = tamanhoFonteAtual + 'px';
+        });
     }
 
     btnAumentar.addEventListener('click', () => {
@@ -279,7 +322,7 @@
         }
     });
 
-    // SISTEMA DE RECONHECIMENTO DE VOZ SIMPLIFICADO
+    // RECONHECIMENTO DE VOZ
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     let recognition = null;
     let gravando = false;
@@ -314,12 +357,7 @@
 
         btnMic.addEventListener('click', () => {
             if (!gravando) {
-                // Inicia direto sem travar a thread de execução do JS
-                try {
-                    recognition.start();
-                } catch(e) {
-                    recognition.stop();
-                }
+                try { recognition.start(); } catch(e) { recognition.stop(); }
             } else {
                 recognition.stop();
             }
@@ -328,12 +366,12 @@
         btnMic.style.display = 'none';
     }
 
-    // MOTOR DE BUSCA CORRIGIDO E SEGURO (MÉTODO ROBUSTO)
+    // MECANISMO DE BUSCA E NORMALIZAÇÃO
     function normalizar(t) {
         if (!t) return "";
         return t.toLowerCase()
-                .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // Remove acentos
-                .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()†“]/g,"")    // Remove pontuações litúrgicas
+                .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+                .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()†“]/g,"")
                 .replace(/\s+/g, " ").trim();
     }
 
@@ -343,7 +381,6 @@
         const trechoNorm = normalizar(trecho);
         let achados = [];
 
-        // Varre o banco de dados local
         for (let i = 0; i < bancoOraacoes.length; i++) {
             const textoNorm = normalizar(bancoOraacoes[i].texto);
             if (textoNorm.indexOf(trechoNorm) !== -1) {
@@ -360,13 +397,40 @@
         }
     }
 
+    // DIVISÃO DE CORES BI-COLOR POR LINHA (GATILHOS DE CONTEXTO)
     function renderizarTextoFinal(oracao, termoOriginal) {
-        // Escapa os caracteres especiais para criar o destaque visual sem quebrar a string
-        const termoEscapado = termoOriginal.trim().replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
-        const regex = new RegExp(`(${termoEscapado})`, 'gi');
-        const textoComDestaque = oracao.texto.replace(regex, "<span class='highlight'>$1</span>");
+        const linhasOriginais = oracao.texto.split('\n');
+        let htmlConstruido = `<div class="oracao-card">`;
+        
+        // Adiciona o título fixo no topo do bloco
+        htmlConstruido += `<div class="titulo-oracao">${oracao.titulo}</div>`;
 
-        appContent.innerHTML = `<div class="oracao-card">${textoComDestaque}</div>`;
+        // Configuração da Regex de busca para o Highlight
+        const termoEscapado = termoOriginal.trim().replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+        const regexHighlight = new RegExp(`(${termoEscapado})`, 'gi');
+
+        linhasOriginais.forEach(linha => {
+            if (!linha.trim() || linha === oracao.titulo) return;
+
+            let classeCor = "linha-neutra";
+            
+            // Verifica o papel litúrgico da linha
+            if (linha.startsWith("PR:")) {
+                classeCor = "linha-pr"; // Amarelo Claro para Presidente
+            } else if (linha.startsWith("AS:")) {
+                classeCor = "linha-as"; // Cor de Abóbora Suave para Assembleia
+            }
+
+            // Aplica o destaque amarelo do termo pesquisado dentro da linha, se houver
+            let linhaProcessada = linha.replace(regexHighlight, "<span class='highlight'>$1</span>");
+
+            // Monta a linha dentro do bloco HTML
+            htmlConstruido += `<div class="linha-liturgica ${classeCor}">${linhaProcessada}</div>`;
+        });
+
+        htmlConstruido += `</div>`;
+        
+        appContent.innerHTML = htmlConstruido;
         appContent.scrollTop = 0;
         aplicarTamanhoFonte();
     }
@@ -383,7 +447,6 @@
         
         appContent.innerHTML = html;
 
-        // Associa os cliques do menu flutuante de escolha
         document.querySelectorAll('.menu-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 const idEscolhido = parseInt(e.target.getAttribute('data-id'));
@@ -393,7 +456,6 @@
         });
     }
 
-    // LISTERNERS DOS BOTÕES DE BUSCA
     btnBuscar.addEventListener('click', () => executarPesquisa(inputBusca.value));
     inputBusca.addEventListener('keypress', (e) => { if (e.key === 'Enter') executarPesquisa(inputBusca.value); });
 
